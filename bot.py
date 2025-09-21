@@ -21,9 +21,8 @@ def main():
 
 if __name__ == "__main__":
     main()
-git add bot.py
-git commit -m "Update bot.py to PTB 20+ format"
-git push origin main
+
+
 
 
 
