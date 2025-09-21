@@ -3,8 +3,8 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 import os
 from dotenv import load_dotenv
 
-load_dotenv()  # .env faylni o‘qiydi
-TOKEN = os.getenv("TOKEN")
+load_dotenv()  # faqat lokal test uchun
+TOKEN = os.getenv("BOT_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Salom! Bot ishga tushdi ✅")
@@ -17,7 +17,9 @@ def main():
     app.add_handler(CommandHandler("start", start))
     
     # Botni ishga tushuramiz
-    app.run_polling()  # eski asyncio kerak emas
+    app.run_polling()  # asyncio kerak emas
 
 if __name__ == "__main__":
     main()
+
+
